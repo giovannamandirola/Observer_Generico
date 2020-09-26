@@ -2,7 +2,7 @@ using System;
 
 namespace Observer
 {
-    public struct Temperature
+    public class Temperature
     {
         private decimal degrees;
 
@@ -20,6 +20,10 @@ namespace Observer
             {
                 return this.degrees;
             }
+            set
+            {
+                this.degrees = value;
+            }
         }
 
         public DateTime Date
@@ -27,6 +31,10 @@ namespace Observer
             get
             {
                 return this.date;
+            }
+            set
+            {
+                this.date = value;
             }
         }
     }

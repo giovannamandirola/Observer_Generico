@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {        
-            TemperatureSensor sensor = new TemperatureSensor();
-            TemperatureReporter reporter = new TemperatureReporter();
+            TemperatureSensor<Temperature> sensor = new TemperatureSensor<Temperature>();
+            TemperatureReporter<Temperature> reporter = new TemperatureReporter<Temperature>();
             reporter.StartReporting(sensor);
-            sensor.GetTemperature();
+            sensor.Notify();
         }
     }
 }
